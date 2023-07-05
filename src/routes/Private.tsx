@@ -10,22 +10,22 @@ interface PrivateProps {
 
 export function Private({ children }: PrivateProps): any {
    const [loading, setLoading] = useState(true);
-   const [singned, setSingned] = useState(false);
+   const [signed, setSigned] = useState(false);
 
    useEffect(() => {
       const unsub = onAuthStateChanged(auth, (user) => {
          if (user) {
             const userData = {
-               uid: user.uid,
-               email: user.email,
+               uid: user?.uid,
+               email: user?.email,
             };
 
             localStorage.setItem("@reactlinks", JSON.stringify(userData));
             setLoading(false);
-            setSingned(true);
+            setSigned(true);
          } else {
             setLoading(false);
-            setSingned(false);
+            setSigned(false);
          }
       });
 
@@ -38,7 +38,7 @@ export function Private({ children }: PrivateProps): any {
       return <div></div>;
    }
 
-   if (singned) {
+   if (!signed) {
       return <Navigate to="/login" />;
    }
 

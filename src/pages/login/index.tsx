@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FormEvent, useState } from "react";
-import { Input } from "../../components/input";
+import { Input } from "../../components/Input";
 
 import { auth } from "../../services/firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
