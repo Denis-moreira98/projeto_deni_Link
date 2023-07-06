@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
+import { Input } from "../../components/input";
 import { FormEvent, useEffect, useState } from "react";
 
 import { db } from "../../services/firebaseConnection";

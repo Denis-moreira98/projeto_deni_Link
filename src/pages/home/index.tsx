@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Social } from "../../components/Social";
+import { Social } from "../../components/social";
 import { FaFacebook, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { db } from "../../services/firebaseConnection";
 import {
@@ -10,7 +10,6 @@ import {
    query,
    doc,
    getDoc,
-   queryEqual,
 } from "firebase/firestore";
 
 interface LinkProps {
